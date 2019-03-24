@@ -37,7 +37,7 @@
         if(Number(value)){
             return;
         } else {
-            alert(`You have entered "${value}" which is not a number! 🤔`);
+            alert(` ❌ You have entered "${value}" which is not a number! 🤔`);
         }
     }
 
@@ -63,10 +63,18 @@
             valueB === valueC && 
             valueC === valueA){
                 alert(" ✔️ This is an EQUILATERAL TRIANGLE 👍");
-            }
-        
+            }        
 
         // Isosceles Triangle
+        if(
+            valueA === valueB &&
+            valueB !== valueC ||
+            valueB === valueC &&
+            valueC !== valueA ||
+            valueC === valueA &&
+            valueA !== valueB){
+                alert(" ✔️ This is an ISOSCELES TRIANGLE 👍");
+        }
 
         // Scalene Triangle
 
