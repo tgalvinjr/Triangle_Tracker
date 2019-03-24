@@ -37,9 +37,8 @@
         if(Number(value)){
             return;
         } else {
-            alert("Kindly input numbers only");
+            alert(`You have entered "${value}" which is not a number! 🤔`);
         }
-
     }
 
 
@@ -56,6 +55,22 @@
         validateInput(valueA);
         validateInput(valueB);
         validateInput(valueC);
+
+
+        // Equilateral Triangle
+        if(
+            valueA === valueB && 
+            valueB === valueC && 
+            valueC === valueA){
+                alert(" ✔️ This is an EQUILATERAL TRIANGLE 👍");
+            }
+        
+
+        // Isosceles Triangle
+
+        // Scalene Triangle
+
+        // 
 
     }
 
