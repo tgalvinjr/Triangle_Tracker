@@ -10,13 +10,13 @@
         <div class="form-container">
             <form action="#" id="values-form">
                 First value:<br>
-                <input type="text" name="value1">
+                <input type="text" name="value1" required>
                 <br>
                 Second value:<br>
-                <input type="text" name="value2">
+                <input type="text" name="value2" required>
                 <br>
                 Third value:<br>
-                <input type="text" name="value3">
+                <input type="text" name="value3" required>
                 <br>
                 <input type="submit" value="Submit">
             </form>
@@ -25,27 +25,38 @@
 </body>
 <script>
     // Get form
-    var form = document.querySelector("#values-form");
+    const form = document.querySelector("#values-form");
 
     // Get values 
-    var value1 = document.querySelector('input[name="value1"]');
-    var value2 = document.querySelector('input[name="value2"]');
-    var value3 = document.querySelector('input[name="value3"]');
+    const value1 = document.querySelector('input[name="value1"]');
+    const value2 = document.querySelector('input[name="value2"]');
+    const value3 = document.querySelector('input[name="value3"]');
 
     // Validate input
+    const validateInput = function(value){
+        if(Number(value)){
+            return;
+        } else {
+            alert("Kindly input numbers only");
+        }
+
+    }
 
 
 
-    var submitHandler = function (event) {
+    const submitHandler = function (event) {
         event.preventDefault();
         console.log("Submitted");
 
+        const valueA = value1.value;
+        const valueB = value2.value;
+        const valueC = value3.value;
 
+        // Validations
+        validateInput(valueA);
+        validateInput(valueB);
+        validateInput(valueC);
 
-        // Equilateral Triangle
-
-
-        // 
     }
 
     // Add submit event and handler
