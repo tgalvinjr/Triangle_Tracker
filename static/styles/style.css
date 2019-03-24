@@ -33,7 +33,7 @@ div {
   padding: 20px;
 }
 .body-theme {
-  background-image: url("static/img/triangles.jpg");
+  background-image: url("../img/triangles.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 550px;
