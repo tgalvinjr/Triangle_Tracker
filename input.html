@@ -2,6 +2,7 @@
 <html>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <body>
+        <div class="body-theme">
         <h2>Triangle Tracker</h2>
 
             <form action="#" id="values-form">
@@ -16,6 +17,7 @@
                 <br>
                 <input type="submit" value="Submit">
             </form>
+        </div>
     </body>
     <script>
         // Get form
@@ -26,9 +28,15 @@
         var value2 = document.querySelector('input[name="value2"]');
         var value3 = document.querySelector('input[name="value3"]');
 
+        // Validate input
+
+       
+
         var submitHandler = function (event){
             event.preventDefault();
             console.log("Submitted");
+
+            
             
             // Equilateral Triangle
 

@@ -31,3 +31,9 @@ div {
   background-color: #f2f2f2;
   padding: 20px;
 }
+.body-theme {
+  background-image: url("static/img/triangles.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+}
