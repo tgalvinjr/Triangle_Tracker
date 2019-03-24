@@ -1,8 +1,13 @@
-var form = document.querySelector("#values-form");
-var submitHandler = function(event) {
-    event.preventDefault();
-    console.log("Submitted")
-
+else if (
+    sidea !== sideb && 
+    sideb !== sidec && 
+    sidec !== sidea && 
+    sidea + sideb > sidec && 
+    sideb + sidec > sidea && 
+    sidea + sidec > sideb
+) {
+    alert("Scalene")
 }
-
-form.addEventListener("submit", submitHandler);
+else {
+    alert("Not a definate triangle")
+}
