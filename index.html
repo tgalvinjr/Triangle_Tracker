@@ -31,12 +31,16 @@
     const value1 = document.querySelector('input[name="value1"]');
     const value2 = document.querySelector('input[name="value2"]');
     const value3 = document.querySelector('input[name="value3"]');
+    
+    let isValid;
 
     // Validate input
     const validateInput = function (value) {
         if (Number(value)) {
+            isValid = true;
             return;
         } else {
+            isValid = false;
             alert(` ❌ You have entered "${value}" which is not a number! 🤔. Please TRY AGAIN`);
         }
     }
@@ -53,37 +57,39 @@
         validateInput(valueB);
         validateInput(valueC);
 
-        // Equilateral Triangle
-        if (
-            valueA === valueB &&
-            valueB === valueC &&
-            valueC === valueA) {
-            alert(" ✔️ This is an EQUILATERAL TRIANGLE 👍");
-        
-        // Isosceles Triangle
-        } else if (
-            valueA === valueB &&
-            valueB !== valueC ||
-            valueB === valueC &&
-            valueC !== valueA ||
-            valueC === valueA &&
-            valueA !== valueB){
-                alert(" ✔️ This is an ISOSCELES TRIANGLE 👍");
-        
-        // Scalene Triangle
-        } else if (
-            valueA !== valueB &&
-            valueB !== valueC &&
-            valueC !== valueA &&
-            valueA + valueB > valueC &&
-            valueB + valueC > valueA &&
-            valueA + valueC > valueB){
-                alert(" ✔️ This is a SCALENE TRIANGLE 👍");
-        } else {
-            alert(`❌ a TRIANGLE CANNOT be formed using the values "${valueA}","${valueB}","${valueC}",🤔 Please TRY AGAIN`)
-        }            
+        if(isValid){
+            // Equilateral Triangle
+            if (
+                valueA === valueB &&
+                valueB === valueC &&
+                valueC === valueA) {
+                alert(" ✔️ This is an EQUILATERAL TRIANGLE 👍");
+            
+            // Isosceles Triangle
+            } else if (
+                valueA === valueB &&
+                valueB !== valueC ||
+                valueB === valueC &&
+                valueC !== valueA ||
+                valueC === valueA &&
+                valueA !== valueB){
+                    alert(" ✔️ This is an ISOSCELES TRIANGLE 👍");
+            
+            // Scalene Triangle
+            } else if (
+                valueA !== valueB &&
+                valueB !== valueC &&
+                valueC !== valueA &&
+                valueA + valueB > valueC &&
+                valueB + valueC > valueA &&
+                valueA + valueC > valueB){
+                    alert(" ✔️ This is a SCALENE TRIANGLE 👍");
+            } else {
+                alert(`❌ a TRIANGLE CANNOT be formed using the values "${valueA}","${valueB}","${valueC}",🤔 Please TRY AGAIN`)
+            }            
         }
 
+        }
     // Add submit event and handler
     form.addEventListener("submit", submitHandler)
 
