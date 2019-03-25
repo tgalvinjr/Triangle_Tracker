@@ -25,7 +25,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #044d08;
-  transition: 1s;
+  transition: 800ms;
   font-size: 20px;
   font-family: sans-serif;
 }
@@ -39,7 +39,7 @@ div {
   background-image: url("../img/triangles.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 550px;
+  height: 580px;
 }
 .form-container {
   width: 50%;
