@@ -75,6 +75,8 @@
                     valueA + valueB > valueC &&
                     valueB + valueC > valueA &&
                     valueA + valueC > valueB &&
+                    valueC + valueA > valueB &&
+                    valueB + valueA > valueC &&
                     valueC + valueB > valueA)) {
                 alert(" ✔️ This is an ISOSCELES TRIANGLE 👍");
 
@@ -85,10 +87,13 @@
                 valueC !== valueA &&
                 valueA + valueB > valueC &&
                 valueB + valueC > valueA &&
-                valueA + valueC > valueB) {
+                valueA + valueC > valueB &&
+                valueC + valueA > valueB &&
+                valueB + valueA > valueC &&
+                valueC + valueB > valueA) {
                 alert(" ✔️ This is a SCALENE TRIANGLE 👍");
             } else {
-                alert(`❌ a TRIANGLE CANNOT be formed using the values "${valueA}","${valueB}","${valueC}",🤔 Please TRY AGAIN`)
+                alert(`ERROR!!!! ❌ A Triangle CANNOT be formed using the values "${valueA}","${valueB}","${valueC}",🤔 Please TRY AGAIN`)
             }
         }
 
