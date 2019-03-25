@@ -25,6 +25,9 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #044d08;
+  transition: 1s;
+  font-size: 20px;
+  font-family: sans-serif;
 }
 
 div {
@@ -40,8 +43,10 @@ div {
 }
 .form-container {
   width: 50%;
-  background-color: rgb(0, 128, 167);
+  background-color: rgb(0, 128, 167,0.4);
   margin-left: 330px; 
+  color: black;
+  font-weight: bold;
 }
 #values-form {
   margin-left: 220px;
