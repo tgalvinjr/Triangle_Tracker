@@ -9,9 +9,14 @@ An application that will help us know whether a triangle is `isosceles,` `equila
 - [X] Most importantly, if the sum of any two sides of the triangle is equal to or less than the third remaining side, then a triangle CANNOT be formed using those values. (For example, the values 9,4 & 3 cannot form a triangle.)
 
 ## BDD
-1. A user can enter the length values of the three sides of a triangle in the HTML form provided in the application.
-2. After user submits the values, the application should tell them what type of triangle the values will produce, whether an `isosceles`, `equilateral`, `scalene` or `NO triangle at all`.
-3. The values entered by the user must be an integer or float. Other input types will trigger a validation error message `"❌ You have entered "value" which is not a number! 🤔. Please TRY AGAIN"`
+| BEHAVIOUR                             | INPUT                             | OUTPUT                   |
+|---------------------------------------|-----------------------------------|--------------------------|
+| When three sides are equal            | side1=side2=side3                 | Equilateral Triangle     |
+| When two out of three sides are equal | side1=side2,side2=side3,side3=1   | Isosceles Triangle       |
+| No sides are equal but sum of 2 sides | side1!==side2!==!side3            | Scalene Triangle         |
+| is greater than third side            |                                   |                          |
+| Sum of 2sides less than third side    |                                   |                          |
+
 # Github Pages
 The UI templates can be tested on [github pages](https://tgalvinjr.github.io/Triangle_Tracker/)
 ## Setup instructions
